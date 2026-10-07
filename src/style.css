@@ -1255,6 +1255,75 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 500; }
 }
 .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
 
+/* ===== SCROLL TO TOP ARROW BUTTON ===== */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 96px;
+  right: 30px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--dark-2);
+  color: var(--gold-light);
+  border: 1.5px solid rgba(201, 137, 63, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(26, 21, 18, 0.28);
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background: var(--gold);
+  color: var(--white);
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(201, 137, 63, 0.5);
+}
+
+.scroll-top-btn:active {
+  transform: translateY(-1px) scale(0.96);
+}
+
+.scroll-top-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.scroll-top-btn:hover svg {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 24px;
+    right: 22px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+  }
+  .scroll-top-btn {
+    bottom: 84px;
+    right: 23px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
 /* ===== LEAF DECORATIONS ===== */
 .leaf-deco {
   position: absolute;
@@ -1276,6 +1345,221 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 500; }
   border-bottom: 1px solid transparent;
 }
 .view-all:hover { border-bottom-color: var(--gold); gap: 10px; }
+
+/* ===== SCROLL OFFSETS & HIGHLIGHT ===== */
+#enquiry-form,
+.scroll-target {
+  scroll-margin-top: 110px;
+}
+
+@keyframes formHighlight {
+  0% { box-shadow: 0 0 0 0 rgba(201, 137, 63, 0.7); }
+  50% { box-shadow: 0 0 0 10px rgba(201, 137, 63, 0.25); }
+  100% { box-shadow: 0 4px 24px rgba(26, 21, 18, 0.1); }
+}
+
+.form-highlight {
+  animation: formHighlight 1.6s ease-out;
+  border-radius: var(--radius-lg);
+}
+
+/* ===== PLAN MY HOLIDAY MODAL ===== */
+.plan-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 21, 18, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2500;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.plan-modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.plan-modal-dialog {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  max-width: 580px;
+  width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(26, 21, 18, 0.35);
+  border: 1px solid rgba(201, 137, 63, 0.25);
+  transform: translateY(24px) scale(0.96);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.plan-modal-backdrop.open .plan-modal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.plan-modal-header {
+  background: var(--dark-2);
+  color: var(--white);
+  padding: 24px 28px;
+  position: relative;
+  flex-shrink: 0;
+  border-bottom: 2px solid var(--gold);
+}
+
+.plan-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--white);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.plan-modal-close:hover {
+  background: var(--gold);
+  color: var(--white);
+  transform: rotate(90deg);
+}
+
+.plan-modal-tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.plan-modal-tag::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--gold-light);
+}
+
+.plan-modal-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.plan-modal-title em {
+  color: var(--gold-light);
+  font-style: italic;
+}
+
+.plan-modal-subtitle {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.plan-modal-body {
+  padding: 24px 28px;
+  overflow-y: auto;
+  background: var(--white);
+}
+
+.modal-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.modal-form .form-group {
+  margin-bottom: 16px;
+}
+
+.modal-form .form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.modal-form .form-group input,
+.modal-form .form-group select,
+.modal-form .form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--cream-dark);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: var(--text);
+  background: var(--cream);
+  transition: var(--transition);
+  outline: none;
+}
+
+.modal-form .form-group input:focus,
+.modal-form .form-group select:focus,
+.modal-form .form-group textarea:focus {
+  border-color: var(--gold);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(201, 137, 63, 0.15);
+}
+
+.plan-modal-success {
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.plan-modal-success-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(94, 132, 85, 0.12);
+  color: var(--leaf);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 16px;
+  border: 2px solid var(--leaf);
+}
+
+@media (max-width: 580px) {
+  .modal-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .plan-modal-dialog {
+    max-height: 95vh;
+  }
+  .plan-modal-header {
+    padding: 20px;
+  }
+  .plan-modal-body {
+    padding: 20px;
+  }
+}
 
 
 
