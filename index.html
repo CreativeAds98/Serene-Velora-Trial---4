@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serene Velora Holidays | Personalised Holiday Planning in Coimbatore</title>
+  <meta name="description" content="Serene Velora is a Coimbatore-based travel agency crafting personalised holidays to beautiful destinations across India and around the world." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" data-transparent="true">
+  <a class="nav-logo" href="index.html">
+    <img src="/logo.png" alt="Serene Velora" />
+    <span class="nav-logo-text">SERENE VELORA</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="destinations.html">Destinations</a></li>
+    <li class="nav-dropdown">
+      <a href="holidays.html">Holidays &#9660;</a>
+      <div class="dropdown-menu">
+        <a href="holidays.html">All Packages</a>
+        <a href="holidays.html#family">Family Holidays</a>
+        <a href="holidays.html#honeymoon">Honeymoon</a>
+        <a href="holidays.html#adventure">Adventure</a>
+        <a href="holidays.html#leisure">Leisure Retreats</a>
+      </div>
+    </li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn btn-dark nav-cta">
+    Plan My Holiday
+  </a>
+  <div class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="overlay" id="nav-overlay"></div>
+<nav class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="holidays.html">Holidays</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary" style="margin-top:20px;justify-content:center;">Plan My Holiday &rarr;</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="/hero-home.jpg" alt="Beautiful travel destination" loading="eager" />
+  </div>
+  <div class="container" style="width:100%">
+    <div class="hero-content animate-up">
+      <p class="hero-label">Your Journey Starts Here</p>
+      <h1>Your escape.<br /><em class="gold">Your way.</em></h1>
+      <p>Beautiful holidays, thoughtfully planned from Coimbatore. We craft personalised journeys that inspire, relax and bring you closer to the places and moments that matter most.</p>
+      <div class="hero-pills">
+        <span class="hero-pill">&#9992; Kerala</span>
+        <span class="hero-pill">&#9968; Switzerland</span>
+        <span class="hero-pill">&#127958; Maldives</span>
+        <span class="hero-pill">&#127797; Bali</span>
+      </div>
+      <a href="contact.html" class="btn btn-primary" id="hero-cta">
+        Explore My Holiday
+      </a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar animate-up" style="animation-delay:0.2s;margin-top:56px;max-width:900px">
+      <div class="search-field">
+        <label>&#9992; Departing From</label>
+        <input type="text" placeholder="Where do you travel?" value="Coimbatore" />
+      </div>
+      <div class="search-divider"></div>
+      <div class="search-field">
+        <label>&#128197; Travel Month</label>
+        <select id="travel-month">
+          <option>Select month</option>
+          <option>January</option><option>February</option><option>March</option>
+          <option>April</option><option>May</option><option>June</option>
+          <option>July</option><option>August</option><option>September</option>
+          <option>October</option><option>November</option><option>December</option>
+        </select>
+      </div>
+      <div class="search-divider"></div>
+      <div class="search-field">
+        <label>&#9749; Holiday Style</label>
+        <select id="holiday-style">
+          <option>All Styles</option>
+          <option>Family</option><option>Honeymoon</option>
+          <option>Adventure</option><option>Leisure</option>
+        </select>
+      </div>
+      <a href="holidays.html" class="btn btn-primary" id="explore-btn" style="white-space:nowrap;flex-shrink:0">
+        Explore Journeys &#8594;
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- OUR CURATED DESTINATIONS -->
+<section class="section section-cream">
+  <div class="container">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:32px;margin-bottom:48px;flex-wrap:wrap">
+      <div class="reveal">
+        <p class="section-label">Our Curated Destinations</p>
+        <h2>A world of possibilities,<br /><em class="gold">curated for you.</em></h2>
+      </div>
+      <div class="reveal reveal-delay-1" style="max-width:380px">
+        <p style="color:var(--text-light);line-height:1.75;margin-top:16px">From misty mountain escapes to dreamy islands, explore our handpicked fully crafted holidays.</p>
+        <a href="destinations.html" class="view-all" style="margin-top:16px;display:inline-flex">View All Destinations &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Featured Destination (Kerala - large) -->
+    <div class="dest-card-lg reveal" style="margin-bottom:24px" id="feat-kerala">
+      <img src="/dest-kerala.jpg" alt="Kerala Backwaters" />
+      <div class="card-overlay">
+        <p class="card-label" style="color:var(--gold-light);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700">01. Kerala</p>
+        <h3>Backwaters, Beaches &amp; Beyond</h3>
+        <p class="subtitle" style="font-style:italic;color:var(--gold-light);font-size:0.8rem">Serene by nature.</p>
+        <p>Iconic backwaters, swaying palms, misty hills and a refuge to fluid nature. Kerala is a journey into a calmer, more beautiful way of life.</p>
+        <a href="destinations.html" class="explore-link">Explore Kerala &rarr;</a>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px" class="reveal reveal-delay-1">
+      <!-- Bali -->
+      <div class="dest-card-lg" style="aspect-ratio:unset;height:320px" id="feat-bali">
+        <img src="/dest-bali.jpg" alt="Bali" />
+        <div class="card-overlay">
+          <p class="card-label" style="color:var(--gold-light);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700">02. Bali</p>
+          <h3 style="font-size:1.3rem">Island Life, Culture &amp; Calm</h3>
+          <p style="font-size:0.78rem">From ancient temples to pristine beaches, Bali offers a perfect blend of spirituality, culture and natural beauty.</p>
+          <a href="destinations.html" class="explore-link">Explore Bali &rarr;</a>
+        </div>
+      </div>
+      <!-- Switzerland -->
+      <div class="dest-card-lg" style="aspect-ratio:unset;height:320px" id="feat-switzerland">
+        <img src="/dest-switzerland.jpg" alt="Switzerland" />
+        <div class="card-overlay">
+          <p class="card-label" style="color:var(--gold-light);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700">03. Switzerland</p>
+          <h3 style="font-size:1.3rem">Alpine Beauty, All Year Round</h3>
+          <p style="font-size:0.78rem">Snow-capped peaks, crystal lakes and charming towns make Switzerland a destination for every season.</p>
+          <a href="destinations.html" class="explore-link">Explore Switzerland &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PACKAGES -->
+<section class="section">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;gap:24px;flex-wrap:wrap">
+      <div class="reveal">
+        <p class="section-label">Featured Tour Packages</p>
+        <h2>Holidays worth<br /><em class="gold">looking forward to.</em></h2>
+        <p style="color:var(--text-light);max-width:440px;margin-top:12px">Handpicked journeys that truly tap into the best of each destination &mdash; every sights, unique experiences and time to fully enjoy.</p>
+      </div>
+      <a href="holidays.html" class="view-all reveal reveal-delay-2">View All Packages &rarr;</a>
+    </div>
+
+    <div class="grid-2 reveal">
+      <!-- Maldives -->
+      <div class="card" id="pkg-maldives">
+        <div class="card-img" style="aspect-ratio:16/10">
+          <img src="/dest-maldives.jpg" alt="Maldives Escape" />
+        </div>
+        <div class="card-body">
+          <p class="card-label">Maldives &bull; 5 Days / 4 Nights</p>
+          <h3 class="card-title">Maldives Escape</h3>
+          <p class="card-desc">Crystal clear waters, white sandy beaches and unforgettable moments in a tropical paradise.</p>
+          <a href="holidays.html" class="card-link">View Journey <span class="card-link-arrow">&rarr;</span></a>
+        </div>
+      </div>
+      <!-- Vietnam -->
+      <div class="card" id="pkg-vietnam">
+        <div class="card-img" style="aspect-ratio:16/10">
+          <img src="/dest-vietnam.jpg" alt="Vietnam Discovery" />
+        </div>
+        <div class="card-body">
+          <p class="card-label">Vietnam &bull; 7 Days / 6 Nights</p>
+          <h3 class="card-title">Vietnam Discovery</h3>
+          <p class="card-desc">From dream cities to breathtaking landscapes, experience the perfect blend of culture, nature and cuisine.</p>
+          <a href="holidays.html" class="card-link">View Journey <span class="card-link-arrow">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW DO YOU LOVE TO TRAVEL -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:40px">
+      <p class="section-label" style="justify-content:center">How Do You Love to Travel?</p>
+    </div>
+    <div class="grid-4 reveal">
+      <div class="travel-type" id="tt-family">
+        <img src="/dest-kerala.jpg" alt="Family Holidays" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#10084;</div>
+          <h4>Family Holidays</h4>
+          <p>Creating unforgettable moments together</p>
+        </div>
+      </div>
+      <div class="travel-type" id="tt-honey">
+        <img src="/dest-maldives.jpg" alt="Honeymoon Escapes" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#10084;</div><h4>Honeymoon Escapes</h4>
+          <p>Romance and paradise for a lifetime of memories</p>
+        </div>
+      </div>
+      <div class="travel-type" id="tt-adventure">
+        <img src="/dest-switzerland.jpg" alt="Adventure Journeys" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#9968;</div><h4>Adventure Journeys</h4>
+          <p>Thrilling experiences on the extraordinary</p>
+        </div>
+      </div>
+      <div class="travel-type" id="tt-leisure">
+        <img src="/dest-bali.jpg" alt="Leisure Retreats" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#9749;</div><h4>Leisure Retreats</h4>
+          <p>Unwind, recharge and enjoy the finer things</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SNIPPET -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2">
+      <div class="reveal">
+        <p class="section-label">About Serene Velora</p>
+        <h2>Thoughtfully planned.<br /><em class="gold">Personally cared for.</em></h2>
+        <p style="color:var(--text-light);margin-top:20px;margin-bottom:28px;line-height:1.8">At Serene Velora Holidays, we create personalised journeys from Coimbatore, designed around your dreams. With local insights, trusted partnerships and attentive support, we make every holiday seamless, meaningful and truly yours.</p>
+        <div style="display:flex;gap:32px;margin-bottom:32px">
+          <div class="feature-item reveal reveal-delay-1">
+            <div class="feature-icon">&#9998;</div><h4>Personalised Itineraries</h4>
+          </div>
+          <div class="feature-item reveal reveal-delay-2">
+            <div class="feature-icon">&#128101;</div><h4>Local Support</h4>
+          </div>
+          <div class="feature-item reveal reveal-delay-3">
+            <div class="feature-icon">&#127758;</div><h4>Scenic Planning</h4>
+          </div>
+        </div>
+        <a href="about.html" class="btn btn-outline" id="about-link">Know More About Us &rarr;</a>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="about-story-img" style="height:400px">
+          <img src="/hero-about.jpg" alt="Serene Velora team" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANNING PROCESS (dark) -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="grid-2" style="margin-bottom:56px">
+      <div class="reveal">
+        <p class="section-label">Our Planning Process</p>
+        <h2>From the first idea<br />to the <em class="gold">final memory.</em></h2>
+      </div>
+      <div class="reveal reveal-delay-1" style="display:flex;align-items:center">
+        <p>We keep the planning simple and stress free, so you can focus on what you look forward to most &mdash; the journey.</p>
+      </div>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-icon">&#9998;</div><h4>Tell Us Your Dream</h4>
+        <p>Tell us your dream destinations, interests, travel dates and preferences.</p>
+      </div>
+      <div class="step reveal-delay-1">
+        <div class="step-num">02</div>
+        <div class="step-icon">&#9992;</div><h4>We Craft Your Journey</h4>
+        <p>Our team designs a personalised itinerary with curated stays, experiences and practical guidance.</p>
+      </div>
+      <div class="step reveal-delay-2">
+        <div class="step-num">03</div>
+        <div class="step-icon">&#10003;</div><h4>Travel with Confidence</h4>
+        <p>We hand over details and stay connected, so you can enjoy a seamless and memorable holiday.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAVELLER STORIES -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:48px">
+      <p class="section-label">Traveller Stories</p>
+      <h2>Beautiful journeys.<br /><em class="gold">Happy memories.</em></h2>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Your traveller stories will appear here."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div>
+            <p class="testimonial-name">Sanjana &amp; Arun</p>
+            <p class="testimonial-loc">Coimbatore &rarr; Maldives Trip</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" style="background:var(--cream)">
+        <p class="testimonial-text">"Serene Velora planned our perfect honeymoon. Every detail was thoughtfully curated &mdash; it was exactly what we dreamed of and more."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">P</div>
+          <div>
+            <p class="testimonial-name">Priya &amp; Karthik</p>
+            <p class="testimonial-loc">Coimbatore &rarr; Bali Trip</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:8px;margin-top:28px">
+      <div class="dot active" style="width:24px;height:6px;border-radius:3px;background:var(--gold);cursor:pointer;transition:all 0.3s"></div>
+      <div class="dot" style="width:6px;height:6px;border-radius:50%;background:var(--cream-dark);cursor:pointer;transition:all 0.3s"></div>
+      <div class="dot" style="width:6px;height:6px;border-radius:50%;background:var(--cream-dark);cursor:pointer;transition:all 0.3s"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div class="cta-banner-bg">
+        <img src="/hero-contact.jpg" alt="Beautiful destination" />
+      </div>
+      <div class="cta-banner-content">
+        <p class="section-label" style="color:var(--gold-light)">Ready to Travel?</p>
+        <h2>Let's plan your next<br /><em class="gold">beautiful chapter.</em></h2>
+        <p>From tiny getaways to once-in-a-lifetime adventures, we're here to turn your travel dreams into reality.</p>
+        <a href="contact.html" class="btn btn-primary" id="cta-bottom">Plan My Holiday</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="/logo.png" alt="Serene Velora" />
+          <span class="footer-logo-text">SERENE VELORA</span>
+        </div>
+        <p>A Coimbatore-based travel agency creating personalised holidays to beautiful destinations across India and around the world.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="holidays.html">Holidays &#9660;</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Popular Destinations</h5>
+        <a href="destinations.html">Kerala</a>
+        <a href="destinations.html">Bali</a>
+        <a href="destinations.html">Maldives</a>
+        <a href="destinations.html">Vietnam</a>
+        <a href="destinations.html">Switzerland</a>
+      </div>
+      <div class="footer-col footer-speak">
+        <h5>Speak with our travel team</h5>
+        <p>We're here to help you plan your perfect holiday. Get in touch with our friendly team from Coimbatore.</p>
+        <a href="contact.html" class="btn btn-primary" id="footer-cta" style="margin-top:8px">Plan My Holiday</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Serene Velora Holidays. All rights reserved.</p>
+      <div class="footer-tagline">Crafting Journeys from Coimbatore to the World &rarr;</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/000" class="whatsapp-float" id="whatsapp-btn" aria-label="Chat on WhatsApp" target="_blank">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
+

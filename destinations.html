@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinations | Serene Velora Holidays - Coimbatore</title>
+  <meta name="description" content="Explore our curated holiday destinations &mdash; Kerala, Bali, Maldives, Vietnam, Switzerland, Dubai and more. Hidden gems and iconic places, planned personally for you." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar dark-nav">
+  <a class="nav-logo" href="index.html">
+    <img src="/logo.png" alt="Serene Velora" />
+    <span class="nav-logo-text">SERENE VELORA</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="destinations.html" class="active">Destinations</a></li>
+    <li class="nav-dropdown">
+      <a href="holidays.html">Holidays &#9660;</a>
+      <div class="dropdown-menu">
+        <a href="holidays.html">All Packages</a>
+        <a href="holidays.html#family">Family Holidays</a>
+        <a href="holidays.html#honeymoon">Honeymoon</a>
+        <a href="holidays.html#adventure">Adventure</a>
+        <a href="holidays.html#leisure">Leisure Retreats</a>
+      </div>
+    </li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn btn-dark nav-cta">Plan My Holiday</a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<div class="overlay" id="nav-overlay"></div>
+<nav class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="holidays.html">Holidays</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary" style="margin-top:20px;justify-content:center;">Plan My Holiday &rarr;</a>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src="/hero-destinations.jpg" alt="World destinations" />
+  </div>
+  <div class="container">
+    <div class="page-hero-content animate-up">
+      <p class="page-hero-label">Destinations</p>
+      <h1>A world of possibilities,<br /><em class="gold">curated for you.</em></h1>
+      <p>Iconic places, hidden gems and unforgettable experiences across India and around the world.</p>
+      <a href="#all-destinations" class="btn btn-primary" id="explore-dests-btn" style="margin-top:24px">Explore All Destinations &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER TABS -->
+<section class="section-sm" style="padding-bottom:0">
+  <div class="container">
+    <div class="filter-tabs" id="all-destinations">
+      <button class="filter-tab active" id="tab-all">All Destinations</button>
+      <button class="filter-tab" id="tab-india">India</button>
+      <button class="filter-tab" id="tab-asia">Asia</button>
+      <button class="filter-tab" id="tab-europe">Europe</button>
+      <button class="filter-tab" id="tab-islands">Islands</button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED: KERALA -->
+<section class="section-sm">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:32px">
+      <p class="section-label">Featured Destination</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+        <h2>Kerala<br /><em class="gold">Serene by nature.</em></h2>
+        <a href="contact.html" class="btn btn-outline" id="kerala-explore">Explore Kerala &rarr;</a>
+      </div>
+    </div>
+    <div class="dest-card-lg reveal" style="height:480px" id="kerala-hero">
+      <img src="/dest-kerala.jpg" alt="Kerala Backwaters" />
+      <div class="card-overlay">
+        <p style="font-size:0.875rem;max-width:600px;line-height:1.7;opacity:0.9">Emerald backwaters, swaying palms, misty hills and a mother to fluid nature. Kerala is a journey into a calmer, more beautiful way of life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATION GRID -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px" class="reveal">
+      <!-- Bali -->
+      <div class="dest-card-lg" id="dest-bali">
+        <img src="/dest-bali.jpg" alt="Bali" />
+        <div class="card-overlay">
+          <p class="card-label" style="color:var(--gold-light);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700">Bali</p>
+          <h3>Island Life, Culture &amp; Calm</h3>
+          <p>From ancient temples to pristine beaches, Bali offers a perfect blend of spirituality, culture and natural beauty.</p>
+          <a href="contact.html" class="explore-link">Explore Bali &rarr;</a>
+        </div>
+      </div>
+      <!-- Switzerland -->
+      <div class="dest-card-lg" id="dest-switzerland">
+        <img src="/dest-switzerland.jpg" alt="Switzerland" />
+        <div class="card-overlay">
+          <p class="card-label" style="color:var(--gold-light);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700">Switzerland</p>
+          <h3>Alpine Beauty, All Year Round</h3>
+          <p>Snow-capped peaks, crystal lakes and charming towns make Switzerland a destination for every season.</p>
+          <a href="contact.html" class="explore-link">Explore Switzerland &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px" class="reveal reveal-delay-1">
+      <!-- Maldives -->
+      <div class="dest-card-lg" id="dest-maldives">
+        <img src="/dest-maldives.jpg" alt="Maldives" />
+        <div class="card-overlay">
+          <p class="card-label" style="color:var(--gold-light);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700">Maldives</p>
+          <h3>Crystal Waters, Endless Bliss</h3>
+          <p>Pristine beaches, turquoise lagoons and world-class stays &mdash; the Maldives is pure paradise.</p>
+          <a href="contact.html" class="explore-link">Explore Maldives &rarr;</a>
+        </div>
+      </div>
+      <!-- Vietnam -->
+      <div class="dest-card-lg" id="dest-vietnam">
+        <img src="/dest-vietnam.jpg" alt="Vietnam" />
+        <div class="card-overlay">
+          <p class="card-label" style="color:var(--gold-light);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700">Vietnam</p>
+          <h3>Vibrant Cities, Breathtaking Landscapes</h3>
+          <p>From bustling cities to serene bays and lush mountains, Vietnam is a journey of contrasts and rich experiences.</p>
+          <a href="contact.html" class="explore-link">Explore Vietnam &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dubai - Wide -->
+    <div class="dest-card-lg reveal reveal-delay-2" id="dest-dubai" style="height:400px">
+      <img src="/dest-dubai.jpg" alt="Dubai" />
+      <div class="card-overlay" style="background:linear-gradient(180deg,transparent 30%,rgba(26,21,18,0.85) 100%)">
+        <p class="card-label" style="color:var(--gold-light);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700">Dubai</p>
+        <h3>Modern Marvels, Timeless Experiences</h3>
+        <p style="max-width:600px">A dazzling blend of futuristic skylines, luxury shopping, desert adventures and world-class hospitality.</p>
+        <a href="contact.html" class="explore-link">Explore Dubai &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAVEL BY EXPERIENCE -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:40px">
+      <p class="section-label">Travel by Experience</p>
+      <h2>Find your kind<br /><em class="gold">of escape.</em></h2>
+      <p style="color:var(--text-light);max-width:500px;margin-top:12px">Whether you seek sun-kissed beaches, majestic mountains, rich cultural adventures, travel is a perfect journey waiting for you.</p>
+    </div>
+    <div class="grid-4 reveal">
+      <div class="travel-type" id="exp-beach" style="aspect-ratio:3/3.5">
+        <img src="/dest-maldives.jpg" alt="Beach Escapes" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#10084;</div>
+          <h4>Beach Escapes</h4>
+          <p>Sun, sand and serene shores</p>
+        </div>
+      </div>
+      <div class="travel-type" id="exp-mountain" style="aspect-ratio:3/3.5">
+        <img src="/dest-switzerland.jpg" alt="Mountain Getaways" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#10084;</div>
+          <h4>Mountain Getaways</h4>
+          <p>Breathtaking views and fresh perspectives</p>
+        </div>
+      </div>
+      <div class="travel-type" id="exp-cultural" style="aspect-ratio:3/3.5">
+        <img src="/dest-bali.jpg" alt="Cultural Journeys" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#10084;</div>
+          <h4>Cultural Journeys</h4>
+          <p>Heritage, tradition and local experiences</p>
+        </div>
+      </div>
+      <div class="travel-type" id="exp-adventure" style="aspect-ratio:3/3.5">
+        <img src="/dest-vietnam.jpg" alt="Adventure Trips" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#10084;</div>
+          <h4>Adventure Trips</h4>
+          <p>Discover more, explore beyond</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOT SURE? CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div class="cta-banner-bg">
+        <img src="/hero-contact.jpg" alt="Plan your escape" />
+      </div>
+      <div class="cta-banner-content">
+        <p class="section-label" style="color:var(--gold-light)">Start Planning</p>
+        <h2>Not sure where to go?<br /><em class="gold">Let's find your perfect escape.</em></h2>
+        <p>Tell us what you love, and our travel specialists will craft a personalised itinerary that is perfectly you.</p>
+        <a href="contact.html" class="btn btn-primary" id="dests-cta">Plan My Holiday</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="/logo.png" alt="Serene Velora" />
+          <span class="footer-logo-text">SERENE VELORA</span>
+        </div>
+        <p>A Coimbatore-based travel agency creating personalised holidays to beautiful destinations across India and around the world.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="holidays.html">Holidays &#9660;</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Popular Destinations</h5>
+        <a href="destinations.html">Kerala</a>
+        <a href="destinations.html">Bali</a>
+        <a href="destinations.html">Maldives</a>
+        <a href="destinations.html">Vietnam</a>
+        <a href="destinations.html">Switzerland</a>
+      </div>
+      <div class="footer-col footer-speak">
+        <h5>Speak with our travel team</h5>
+        <p>We're here to help you plan your perfect holiday. Get in touch with our friendly team from Coimbatore.</p>
+        <a href="contact.html" class="btn btn-primary" id="footer-cta" style="margin-top:8px">Plan My Holiday</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Serene Velora Holidays. All rights reserved.</p>
+      <div class="footer-tagline">Crafting Journeys from Coimbatore to the World &rarr;</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/000" class="whatsapp-float" id="whatsapp-btn" aria-label="Chat on WhatsApp" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
+
+

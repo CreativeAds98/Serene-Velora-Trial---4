@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holiday Packages | Serene Velora Holidays - Coimbatore</title>
+  <meta name="description" content="Explore our handpicked holiday packages &mdash; Maldives, Vietnam, Switzerland Alps, Bali and more. Extraordinary holidays, beautifully planned." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar dark-nav">
+  <a class="nav-logo" href="index.html">
+    <img src="/logo.png" alt="Serene Velora" />
+    <span class="nav-logo-text">SERENE VELORA</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="destinations.html">Destinations</a></li>
+    <li class="nav-dropdown">
+      <a href="holidays.html" class="active">Holidays &#9660;</a>
+      <div class="dropdown-menu">
+        <a href="holidays.html">All Packages</a>
+        <a href="#family">Family Holidays</a>
+        <a href="#honeymoon">Honeymoon</a>
+        <a href="#adventure">Adventure</a>
+        <a href="#leisure">Leisure Retreats</a>
+      </div>
+    </li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn btn-dark nav-cta">Plan My Holiday</a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<div class="overlay" id="nav-overlay"></div>
+<nav class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="holidays.html">Holidays</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary" style="margin-top:20px;justify-content:center;">Plan My Holiday &rarr;</a>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src="/hero-holidays.jpg" alt="Luxury holiday packages" />
+  </div>
+  <div class="container">
+    <div class="page-hero-content animate-up">
+      <p class="page-hero-label">Holiday Packages</p>
+      <h1>Extraordinary holidays.<br /><em class="gold">Beautifully planned.</em></h1>
+      <p>Handpicked journeys to the world's most inspiring destinations &mdash; crafted with care, just for you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH / FILTER BAR -->
+<section style="background:var(--cream);padding:24px 0;border-bottom:1px solid var(--cream-dark)">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:180px;background:var(--white);border:1px solid var(--cream-dark);border-radius:8px;padding:10px 16px">
+        <span>&#9660;</span><select id="dest-filter" style="border:none;outline:none;font-size:0.875rem;color:var(--text);background:transparent;width:100%;appearance:none">
+          <option>Where do you want to go?</option>
+          <option>Kerala</option><option>Bali</option><option>Maldives</option>
+          <option>Vietnam</option><option>Switzerland</option><option>Dubai</option>
+        </select>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:160px;background:var(--white);border:1px solid var(--cream-dark);border-radius:8px;padding:10px 16px">
+        <span>&#9660;</span><select id="style-filter" style="border:none;outline:none;font-size:0.875rem;color:var(--text);background:transparent;width:100%;appearance:none">
+          <option>All Styles</option>
+          <option>Family</option><option>Honeymoon</option><option>Adventure</option><option>Leisure</option>
+        </select>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:160px;background:var(--white);border:1px solid var(--cream-dark);border-radius:8px;padding:10px 16px">
+        <span>&#9660;</span><select id="dur-filter" style="border:none;outline:none;font-size:0.875rem;color:var(--text);background:transparent;width:100%;appearance:none">
+          <option>Select Duration</option>
+          <option>3-5 Days</option><option>6-8 Days</option><option>9+ Days</option>
+        </select>
+      </div>
+      <a href="contact.html" class="btn btn-primary" id="search-pkgs" style="flex-shrink:0">Explore Packages &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- OUR HOLIDAY PACKAGES -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:56px">
+      <p class="section-label">Our Holiday Packages</p>
+      <h2>Curated journeys for<br /><em class="gold">every kind of traveller.</em></h2>
+      <p style="color:var(--text-light);max-width:600px;margin-top:12px">From tropical beaches to cultural treasures and breathtaking landscapes, explore our handpicked holiday packages designed for meaningful, memorable travel experiences.</p>
+    </div>
+
+    <!-- Maldives Package -->
+    <div class="pkg-card reveal" id="pkg-maldives">
+      <div class="pkg-card-img">
+        <img src="/dest-maldives.jpg" alt="Maldives Escape" />
+      </div>
+      <div class="pkg-card-body">
+        <span class="pkg-badge">Beach Escape</span>
+        <h2 class="pkg-title">Maldives Escape</h2>
+        <p class="pkg-duration">5 Days / 4 Nights</p>
+        <p class="pkg-desc">Crystal clear waters, white sand beaches and unforgettable moments in a tropical paradise.</p>
+        <div class="pkg-details">
+          <div class="pkg-detail">
+            <div class="pkg-detail-icon">&#10003;</div>
+            <span>Luxury overwater villa with lagoon views</span>
+          </div>
+          <div class="pkg-detail">
+            <div class="pkg-detail-icon">&#10003;</div>
+            <span>Snorkelling, island hopping &amp; sunset cruise</span>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-outline" id="maldives-btn">View Journey &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Vietnam Package -->
+    <div class="pkg-card reverse reveal" id="pkg-vietnam">
+      <div class="pkg-card-img">
+        <img src="/dest-vietnam.jpg" alt="Vietnam Discovery" />
+      </div>
+      <div class="pkg-card-body">
+        <span class="pkg-badge">Culture &amp; Nature</span>
+        <h2 class="pkg-title">Vietnam Discovery</h2>
+        <p class="pkg-duration">7 Days / 6 Nights</p>
+        <p class="pkg-desc">From vibrant cities to breathtaking landscapes, experience the perfect blend of culture, nature and cuisine.</p>
+        <div class="pkg-details">
+          <div class="pkg-detail">
+            <div class="pkg-detail-icon">&#10003;</div>
+            <span>Handpicked hotels with authentic local charm</span>
+          </div>
+          <div class="pkg-detail">
+            <div class="pkg-detail-icon">&#10003;</div>
+            <span>Ha Long Bay cruise, ancient towns &amp; local cuisine</span>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-outline" id="vietnam-btn">View Journey &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Switzerland Package -->
+    <div class="pkg-card reveal" id="pkg-switzerland">
+      <div class="pkg-card-img">
+        <img src="/dest-switzerland.jpg" alt="Swiss Alpine Journey" />
+      </div>
+      <div class="pkg-card-body">
+        <span class="pkg-badge">Alpine Adventure</span>
+        <h2 class="pkg-title">Swiss Alpine Journey</h2>
+        <p class="pkg-duration">8 Days / 7 Nights</p>
+        <p class="pkg-desc">Snow-capped peaks, charming villages and scenic rail journeys through one of the world's most beautiful regions.</p>
+        <div class="pkg-details">
+          <div class="pkg-detail">
+            <div class="pkg-detail-icon">&#10003;</div>
+            <span>Premium alpine hotels with mountain views</span>
+          </div>
+          <div class="pkg-detail">
+            <div class="pkg-detail-icon">&#10003;</div>
+            <span>Scenic train rides, glaciers &amp; picturesque towns</span>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-outline" id="swiss-btn">View Journey &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Bali Package -->
+    <div class="pkg-card reverse reveal" id="pkg-bali">
+      <div class="pkg-card-img">
+        <img src="/dest-bali.jpg" alt="Bali Island Retreat" />
+      </div>
+      <div class="pkg-card-body">
+        <span class="pkg-badge">Island Retreat</span>
+        <h2 class="pkg-title">Bali Island Retreat</h2>
+        <p class="pkg-duration">6 Days / 5 Nights</p>
+        <p class="pkg-desc">From serene temples to beautiful beaches, experience the magic of Bali's rich culture and natural beauty.</p>
+        <div class="pkg-details">
+          <div class="pkg-detail">
+            <div class="pkg-detail-icon">&#10003;</div>
+            <span>Boutique resorts with pool and garden views</span>
+          </div>
+          <div class="pkg-detail">
+            <div class="pkg-detail-icon">&#10003;</div>
+            <span>Temples, rice terraces, scenic landscapes &amp; beach time</span>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-outline" id="bali-btn">View Journey &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE BY HOLIDAY STYLE -->
+<section class="section section-cream" id="family">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:40px">
+      <p class="section-label">Explore by Holiday Style</p>
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px">
+        <h2>Holidays for<br /><em class="gold">every dream.</em></h2>
+        <p style="color:var(--text-light);max-width:400px">No matter how you love to travel, we have a holiday style that fits your dream getaway.</p>
+      </div>
+    </div>
+    <div class="grid-4 reveal">
+      <div class="travel-type" id="hs-family">
+        <img src="/dest-kerala.jpg" alt="Family Holidays" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#10084;</div>
+          <h4>Family Holidays</h4>
+          <p>Unforgettable moments for generations</p>
+        </div>
+      </div>
+      <div class="travel-type" id="hs-honey">
+        <img src="/dest-maldives.jpg" alt="Honeymoon Escapes" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#10084;</div>
+          <h4>Honeymoon Escapes</h4>
+          <p>Romance for a lifetime of memories</p>
+        </div>
+      </div>
+      <div class="travel-type" id="hs-adventure">
+        <img src="/dest-switzerland.jpg" alt="Adventure Journeys" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#10084;</div>
+          <h4>Adventure Journeys</h4>
+          <p>Thrilling experiences on the extraordinary</p>
+        </div>
+      </div>
+      <div class="travel-type" id="hs-leisure">
+        <img src="/dest-bali.jpg" alt="Leisure Retreats" />
+        <div class="travel-type-content">
+          <div class="travel-type-icon">&#10084;</div>
+          <h4>Leisure Retreats</h4>
+          <p>Unwind and enjoy the finer things</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM HOLIDAYS CTA -->
+<section class="section section-dark">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap">
+      <div class="reveal" style="max-width:560px">
+        <p class="section-label">Custom Holidays</p>
+        <h2>A holiday as<br /><em class="gold">individual as you.</em></h2>
+        <p style="margin-top:16px">Tell us your ideas, preferences and travel goals. Our experts will craft a personalised itinerary that is perfectly you.</p>
+      </div>
+      <div class="reveal reveal-delay-2" style="flex-shrink:0">
+        <a href="contact.html" class="btn btn-primary" id="custom-cta">Plan My Holiday</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="/logo.png" alt="Serene Velora" />
+          <span class="footer-logo-text">SERENE VELORA</span>
+        </div>
+        <p>A Coimbatore-based travel agency creating personalised holidays to beautiful destinations across India and around the world.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="holidays.html">Holidays &#9660;</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Popular Destinations</h5>
+        <a href="destinations.html">Kerala</a>
+        <a href="destinations.html">Bali</a>
+        <a href="destinations.html">Maldives</a>
+        <a href="destinations.html">Vietnam</a>
+        <a href="destinations.html">Switzerland</a>
+      </div>
+      <div class="footer-col footer-speak">
+        <h5>Speak with our travel team</h5>
+        <p>We're here to help you plan your perfect holiday.</p>
+        <a href="contact.html" class="btn btn-primary" id="footer-cta" style="margin-top:8px">Plan My Holiday</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Serene Velora Holidays. All rights reserved.</p>
+      <div class="footer-tagline">Crafting Journeys from Coimbatore to the World &rarr;</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/000" class="whatsapp-float" id="whatsapp-btn" aria-label="Chat on WhatsApp" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
+
+
